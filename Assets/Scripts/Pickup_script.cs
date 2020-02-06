@@ -68,7 +68,7 @@ public class Pickup_script : MonoBehaviour
             gameObject.GetComponent<NoGravity>().enabled = false;
             transform.position = Dest.position;
             transform.rotation = Dest.rotation;
-            thing.GetComponent<Rigidbody>().useGravity = true;
+            //thing.GetComponent<Rigidbody>().useGravity = true;
         }
 
         
