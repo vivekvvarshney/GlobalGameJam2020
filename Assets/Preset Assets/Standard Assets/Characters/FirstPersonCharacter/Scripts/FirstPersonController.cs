@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
 
@@ -51,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            pause = false;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -67,7 +69,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-
             if (Input.GetKeyDown(KeyCode.P))
             {
                 pause = !pause;
@@ -101,7 +102,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             //exit.onClick.AddListener(Exitfunction);
             //pauseB.onClick.AddListener(PauseFunction);
-            RotateView();
+
 
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -296,7 +297,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
-
         void Exitfunction()
         {
             Application.Quit(0);
@@ -305,6 +305,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             SceneManager.LoadScene(0);
         }
-
     }
 }

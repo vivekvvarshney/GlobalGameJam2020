@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickup_script : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class Pickup_script : MonoBehaviour
     public float snappingDistance = 1f;
     public GameObject dialogueText;
     int isSnapped=0;
-
     public Transform Dest;
 
     public void Start()
     {
+        //thing = this.transform.gameObject;
         //thing.GetComponent<Rigidbody>().useGravity = true;
+        dialogueText.SetActive(false);
     }
 
     void OnMouseDown()
@@ -28,6 +30,8 @@ public class Pickup_script : MonoBehaviour
         //thing.transform.position = Vector3.MoveTowards(transform.position, guide.position, 10 * Time.deltaTime);
         thing.transform.parent = temp.transform.parent;
         gameObject.GetComponent<NoGravity>().enabled = false;
+        this.gameObject.GetComponent<AudioSource>().Play();
+        dialogueText.SetActive(true);
     }
 
     private void OnMouseUp()
@@ -38,7 +42,6 @@ public class Pickup_script : MonoBehaviour
         isMoving = false;
         thing.transform.parent = transform.parent;
         gameObject.GetComponent<NoGravity>().enabled = true;
-
         this.gameObject.GetComponent<AudioSource>().Pause();
         dialogueText.SetActive(false);
         if(thing.transform.position.Equals(this.transform.position))
@@ -52,7 +55,6 @@ public class Pickup_script : MonoBehaviour
                 isSnapped++;
             }
         }
-
     }
 
     void Snap()
