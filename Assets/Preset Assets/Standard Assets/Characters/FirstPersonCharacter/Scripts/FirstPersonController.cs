@@ -42,26 +42,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         private bool pause = false;
         public GameObject PauseText;
         //public Button exit;
         //public GameObject pauseButton;
         //public Button pauseB;
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
 
         // Use this for initialization
         private void Start()
@@ -82,11 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             if (Input.GetKeyDown(KeyCode.P))
             {
                 pause = !pause;
@@ -120,19 +101,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             //exit.onClick.AddListener(Exitfunction);
             //pauseB.onClick.AddListener(PauseFunction);
-
-
-=======
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
             RotateView();
->>>>>>> parent of bd75c1f... GGJ end
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -326,11 +296,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         void Exitfunction()
         {
             Application.Quit(0);
@@ -339,15 +305,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             SceneManager.LoadScene(0);
         }
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
+
     }
 }

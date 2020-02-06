@@ -9,24 +9,9 @@ public class Pickup_script : MonoBehaviour
     public Transform guide;
     public bool isMoving, isInPlace;
     public float snappingDistance = 1f;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public GameObject dialogueText;
     int isSnapped=0;
-=======
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
 
->>>>>>> parent of bd75c1f... GGJ end
     public Transform Dest;
 
     public void Start()
@@ -53,11 +38,7 @@ public class Pickup_script : MonoBehaviour
         isMoving = false;
         thing.transform.parent = transform.parent;
         gameObject.GetComponent<NoGravity>().enabled = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         this.gameObject.GetComponent<AudioSource>().Pause();
         dialogueText.SetActive(false);
         if(thing.transform.position.Equals(this.transform.position))
@@ -71,16 +52,7 @@ public class Pickup_script : MonoBehaviour
                 isSnapped++;
             }
         }
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
-=======
->>>>>>> parent of bd75c1f... GGJ end
+
     }
 
     void Snap()
